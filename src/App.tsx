@@ -1,10 +1,14 @@
+import { BrowserRouter, Route, Routes } from "react-router"
+import Index from "./routes/index"
+import InteractiveIndex from "./routes/interactive-index"
+
 export default function App() {
   return (
-    <main className="min-h-screen bg-white text-center text-black">
-      <h1>Index</h1>
-      <a className="underline" href="/interactive-index">
-        interactive-index
-      </a>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/interactive-index" element={<InteractiveIndex />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
