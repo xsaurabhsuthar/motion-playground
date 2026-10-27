@@ -9,24 +9,25 @@ const items = [
 ];
 
 const transition = { type: "spring" as const, bounce: 0.2, visualDuration: 0.2 };
+const exit = { type: "spring" as const, bounce: 0, visualDuration: 0.12 };
 
 const list: Variants = {
-  rest: { transition: { delayChildren: stagger(0.06, { from: "last" }) } },
+  rest: { transition: { delayChildren: stagger(0.02, { from: "last" }) } },
   hover: { transition: { delayChildren: stagger(0.06) } },
 };
 
 const row: Variants = {
-  rest: { height: 8, paddingTop: 0, paddingBottom: 0 },
+  rest: { height: 8, paddingTop: 0, paddingBottom: 0, transition: exit },
   hover: { height: "auto", paddingTop: 0.5, paddingBottom: 0.5 },
 };
 
 const label: Variants = {
-  rest: { opacity: 0, y: 8, filter: "blur(8px)" },
+  rest: { opacity: 0, y: 8, filter: "blur(8px)", transition: exit },
   hover: { opacity: 1, y: 0, filter: "blur(0px)" },
 };
 
 const rule: Variants = {
-  rest: { opacity: 1, filter: "blur(0px)" },
+  rest: { opacity: 1, filter: "blur(0px)", transition: exit },
   hover: { opacity: 0, filter: "blur(8px)" },
 };
 
