@@ -8,6 +8,9 @@ export default function Index() {
         <Link className="block text-gray-500 hover:text-gray-900" to="/interactive-index">
           Interactive Index
         </Link>
+        <Link className="block text-gray-500 hover:text-gray-900" to="/svg-animations">
+          SVG Animations
+        </Link>
       </section>
     </main>
   );
