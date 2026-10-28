@@ -18,11 +18,10 @@ const color = useTransform(x, [-limit, 0, limit], [
     "rgb(3, 209, 0)",
 ])
 
-
   return (
     <main className="flex min-h-screen flex-col items-start gap-10 bg-black px-6 py-16 text-white">
       <h1 className="text-xl font-medium">SVG Animations</h1>
-      <motion.div className="flex m-auto h-[200px] aspect-square bg-blue-600 rounded-2xl" style={{ background }}>
+      <motion.div className="flex m-auto h-50 aspect-video bg-blue-600 rounded-2xl" style={{ background }}>
         <motion.div
           className="m-auto aspect-square h-24 rounded-2xl bg-white"
           drag="x"
